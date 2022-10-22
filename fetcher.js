@@ -5,8 +5,6 @@ let arg = process.argv.slice(2);
 let URL = arg[0];
 let filePath = arg[1];
 
-const content = 'Some content!';
-
 request(URL, (error, response, body) => {
 
   fs.writeFile(filePath, body, err => {
